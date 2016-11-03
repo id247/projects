@@ -144,7 +144,6 @@ gulp.task('html', function(callback){
 			indent: true
 		}))
 		.on('error', $.notify.onError())
-		.pipe($.if(devMode === 'production', $.htmlmin({collapseWhitespace: true})))
 		.pipe(gulp.dest(newDestFolder))
 		.on('end', callback);
 	};
