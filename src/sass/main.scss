@@ -120,10 +120,16 @@
 	&__href{
 		color: #3778b1;
 		text-decoration: none;
+		&:hover{
+			.case__href-text{
+				border-color: transparent;
+			}
+		}
 	}
 
 	&__href-text{
-		@extend .link;
+		transition: all .2s;
+		border-bottom: 1px solid;
 	}
 
 }
